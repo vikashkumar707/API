@@ -1,0 +1,17 @@
+name: My_Repository_Dispatch 
+
+on:
+  repository_dispatch:
+    types:     # List the types of events this workflow should listen to
+      - my-event-type
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add your desired steps here...
+      # For example, you can run shell commands, call other actions, etc.
